@@ -1,0 +1,11 @@
+* {
+    max-width: 75vw;
+    font-size: 2vw;
+    margin: 20px auto;
+}
+
+h1 {font-size: 5vw; text-align: center;}
+
+h6 {text-align: center; color:#44f;}
+
+img {width: 20vw; margin: 20px 30vw;}
