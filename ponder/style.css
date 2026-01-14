@@ -1,0 +1,29 @@
+body {background: #ddd;}
+#content {
+    background:#ddd;
+    border: solid #aaa 1px;
+    margin: 15px;
+    text-align: center;
+    font-size: 2.1vw;
+}
+
+h1 ~ p {color:#35f;}
+hr {
+    border:solid 1px #24c;
+    width:80vw;
+}
+
+img {
+    max-width:50vw;
+}
+
+#topics {
+    margin: 0 20vw 10vh 20vw;
+    max-width:50vw;
+}
+
+li {
+    list-style-type: none;
+    text-align: left;
+    text-justify: left;
+}
