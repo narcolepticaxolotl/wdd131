@@ -2,6 +2,7 @@
     max-width: 75vw;
     font-size: 2vw;
     margin: 20px auto;
+    transition: 0.2s ease;
 }
 
 h1 {font-size: 5vw; text-align: center;}
