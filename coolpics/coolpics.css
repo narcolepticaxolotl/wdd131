@@ -1,0 +1,71 @@
+/* https://wddbyui.github.io/wdd131/prove/prove_wk3.html */
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header, footer {
+    background: #37f;
+    color:#fff;
+    text-align: center;
+    min-height: 80px;
+}
+
+nav {
+    padding: 10px;
+}
+
+#desktop-menu {
+    display:none;
+}
+
+main {
+    background: #ccc;
+    text-align: center;
+}
+
+#image-gallery {
+    display: grid;
+    grid-gap: 25px;
+}
+
+img {
+    width: 75vw;
+    height: 75vw;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border: solid #eee 5px;
+    box-shadow: 5px 5px 5px #333;
+    margin: 0 auto;
+}
+
+footer p {
+    padding: 15px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    #image-gallery {grid-template-columns: 1fr 1fr;}
+    img {
+        width: 35vw;
+        height: 35vw;
+    }
+}
+@media screen and (min-width: 700px) {
+    #image-gallery {grid-template-columns: 1fr 1fr 1fr;}
+    img {
+        width: 27vw;
+        height: 27vw;
+        max-width: 250px;
+        max-height: 250px;
+    }
+    #desktop-menu {
+        width:400px;
+        margin: 0 auto;
+        display:flex;
+        justify-content: space-around;
+        text-align:center;
+    }
+    #desktop-menu a {color:white;}
+    #mobile-menu {display:none;}
+}
