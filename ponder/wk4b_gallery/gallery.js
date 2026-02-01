@@ -3,7 +3,7 @@
 const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
-const clsoeButton = modal.querySelector('.close-viewer');
+const closeButton = modal.querySelector('.close-viewer');
 
 gallery.addEventListener('click', openModal);
 
@@ -21,7 +21,7 @@ function openModal(e) {
 }
 
 // Close modal viewer on button click.
-clsoeButton.addEventListener('click', () => {
+closeButton.addEventListener('click', () => {
     modal.close();
 });
 

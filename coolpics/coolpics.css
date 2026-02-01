@@ -1,4 +1,5 @@
 /* https://wddbyui.github.io/wdd131/prove/prove_wk3.html */
+/* https://wddbyui.github.io/wdd131/prove/prove_wk4.html */
 
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -44,12 +45,48 @@ footer p {
     padding: 15px;
 }
 
+/* Image viewer box */
+dialog {
+    background: #0006;
+    width: 100%;
+    height: 100%;
+}
+.modal-img {
+    width: 85vw;
+    height: unset;
+    max-width: unset;
+    max-height: unset;
+    display: block;
+}
+dialog button {
+    position: absolute;
+    top: 5vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+.hidden {display:none;}
+#menu {
+    background: none;
+    color: white;
+    font-size: 6vw;
+    border:none;
+    padding: 10px 30px;
+}
+#mobile-menu a {
+    padding: 5px 36vw;
+    color: white;
+    text-decoration: none;
+}
+
 @media screen and (min-width: 400px) and (max-width: 700px) {
     #image-gallery {grid-template-columns: 1fr 1fr;}
     img {
         width: 35vw;
         height: 35vw;
     }
+    #menu {font-size: 4vw;}
 }
 @media screen and (min-width: 700px) {
     #image-gallery {grid-template-columns: 1fr 1fr 1fr;}
@@ -67,5 +104,5 @@ footer p {
         text-align:center;
     }
     #desktop-menu a {color:white;}
-    #mobile-menu {display:none;}
+    #menu {display:none;}
 }

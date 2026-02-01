@@ -49,14 +49,15 @@ footer {
     text-align: center;
 }
 
-@media screen and (min-width: 1400px) and (max-width: 1700px) {
+@media screen and (min-width: 400px) and (max-width: 700px) {
+    body {background: #00f;}
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
     main section {display:unset;
     }
-    nav {
+    nav.hide {
         display:flex;
         justify-content: right;
         font-size: 1.2em;
@@ -68,14 +69,15 @@ footer {
     .menu-btn {display:none;}
 }
 
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 700px) {
+    body {background:#f00;}
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
     main section {display:unset;
     }
-    nav {
+    nav.hide {
         display:flex;
         justify-content: right;
         font-size: 1.2em;
@@ -84,6 +86,10 @@ footer {
         display:unset;
         text-decoration:none;
     }
+    nav.menu-divider{
+        display:none;
+    }
+
     .menu-btn {display:none;}
 }
 
