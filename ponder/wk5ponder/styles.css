@@ -53,8 +53,10 @@ header, footer {
 }
 
 @media (min-width: 600px) {
-    .movie nav {
+    .main-nav {
         justify-content: center;
+        display:grid;
+        grid-template-columns: repeat(3, 100px);
     }
     .movie {
         display: grid;
