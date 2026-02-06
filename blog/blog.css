@@ -1,0 +1,50 @@
+header h1 {text-align: center;}
+nav {
+    display:flex;
+    /* width: 95vw; */
+    justify-content: right;
+}
+nav a {
+    text-decoration: none;
+    color: brown;
+    padding: 1vh clamp(1rem, 5vw, 40px);
+    
+}
+hr {
+    border: gold 1px solid;}
+hr.mobile-only {margin-top: 6vh;}
+hr.desktop-only {display:none}
+article {
+    display: grid;
+}
+/* article {
+    border: 1px solid black;
+} */
+.basic-info {
+    grid-row: 1 / 2;
+    text-align: right;
+}
+article h2 {color:brown; text-align: center;}
+article img {margin: 0 auto; max-width: 200px; width: 75vw}
+footer {text-align: center;}
+
+@media screen and (min-width: 450px) {
+    /* * {background:red;} */
+    .mobile-only {display:none;}
+    article {
+        max-width: 900px;
+        grid-template-columns: 1fr 1px 4fr;
+        grid-template-rows: 1fr 6fr 1fr;
+        margin: 0 auto;
+    }
+    .basic-info {
+        grid-area: 1 / 1 / 4 / 2;
+        padding-right: 15px;
+    }
+    hr.desktop-only {
+        display: block;
+        grid-area: 1 / 2 / 4 / 3;
+    }
+    article img {max-width: 300px;}
+    .desc {padding-left: 15px;}
+}
