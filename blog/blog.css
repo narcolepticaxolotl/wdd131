@@ -16,6 +16,7 @@ hr.desktop-only {display:none}
 
 article {
     display: grid;
+    margin: 25px auto;
 }
 .basic-info {
     grid-row: 1 / 2;
@@ -35,7 +36,6 @@ footer {text-align: center;}
         max-width: 900px;
         grid-template-columns: 1fr 1px 4fr;
         grid-template-rows: 1fr 6fr 1fr;
-        margin: 0 auto;
     }
     article h2 {
         text-align: left;
