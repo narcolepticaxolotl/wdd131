@@ -66,12 +66,6 @@ const movieList = document.querySelector('#movie-list');
         let newMovieTitle = document.createElement('h2');
         newMovieTitle.textContent = titleInfo;
         newMovie.appendChild(newMovieTitle);
-        //// Date
-        let newMovieDate = document.createElement('p');
-        // let releaseDateLabel = "Release Date: ";
-        // releaseDateLabel.
-        newMovieDate.innerHTML = `<b>Release Date:</b> ${dateInfo}`;
-        newMovie.appendChild(newMovieDate);
         
         //// Image
         let newMovieImg = document.createElement('img');
@@ -81,6 +75,10 @@ const movieList = document.querySelector('#movie-list');
         newMovieImg.alt = imgAltInfo;
         newMovie.appendChild(newMovieImg);
         
+        //// Date
+        let newMovieDate = document.createElement('p');
+        newMovieDate.innerHTML = `<b>Release Date:</b> ${dateInfo}`;
+        newMovie.appendChild(newMovieDate);
         //// Ages
         let newMovieAges = document.createElement('p');
         newMovieAges.innerHTML = `<b>Recommended Age:</b> ${agesInfo}`;
