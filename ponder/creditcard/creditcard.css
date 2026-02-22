@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.form-wrapper {
+  width: 420px;
+  display: grid;
+  gap: 20px;
+}
+
+.card-container {
+  position: relative;
+  height: 250px;
+}
+
+/* Shared card styles */
+.card {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+/* Front card */
+.card-front {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Grid inside front card */
+.card-front-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 10px 15px;
+}
+
+.total {
+  grid-column: 1 / 2;
+  font-weight: bold;
+}
+
+.card-logo {
+  grid-column: 2 / 3;
+  justify-self: end;
+  width: 40px;
+  height: 25px;
+  background: gold;
+  border-radius: 4px;
+}
+
+.card-number-label {
+  grid-column: 1 / 3;
+}
+
+.card-number {
+  grid-column: 1 / 3;
+}
+
+.card-holder-label {
+  grid-column: 1 / 2;
+}
+
+.card-holder {
+  grid-column: 1 / 2;
+}
+
+.expiration-label {
+  grid-column: 2 / 3;
+}
+
+.expiration-inputs {
+  grid-column: 2 / 3;
+  display: flex;
+  gap: 8px;
+}
+
+.expiration-inputs input {
+  width: 50%;
+}
+
+/* Back card */
+.card-back {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.stripe {
+  height: 40px;
+  background: black;
+  margin-bottom: 20px;
+}
+
+.cvv-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
+}
+
+.cvv-section input {
+  width: 80px;
+}
+
+/* Inputs */
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+.submit-btn {
+  justify-self: end;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #e0e0e0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #d5d5d5;
+}
+
+
+
+
+/* #cardInfo {
+    width: 500px; height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+}
+
+#creditCardBack {
+    grid-area: 2 / 2 / 4 / 4;
+    background: red;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 3fr 1fr 4fr;
+}
+#CVC-CVV {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+
+#creditCardFront {
+    grid-area: 1 / 1 / 3 / 3;
+    background: blue;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#price {
+    grid-area: 1 / 1;
+}
+
+#cardNumberBox {
+    grid-area: 2 / 1;
+}
+
+#cardHolderBox {
+    grid-area: 3 / 1;
+} */
+
+

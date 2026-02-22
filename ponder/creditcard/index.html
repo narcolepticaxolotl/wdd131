@@ -1,0 +1,141 @@
+<!-- 20260221 -->
+<!-- https://wddbyui.github.io/wdd131/prove/prove_wk7.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Credit Card Form</title>
+<link rel="stylesheet" href="creditcard.css" />
+</head>
+<body>
+
+<div class="form-wrapper">
+
+  <div class="card-container">
+
+    <!-- Card Front -->
+    <div class="card card-front">
+      <div class="card-front-grid">
+        <div class="total">TOTAL: $199</div>
+        <div class="card-logo"></div>
+
+        <label class="card-number-label">CARD NUMBER</label>
+        <input type="text" placeholder="1234 5678 9101 1020" class="card-number"/>
+
+        <label class="card-holder-label">CARD HOLDER</label>
+        <input type="text" placeholder="John Doe" class="card-holder"/>
+
+        <label class="expiration-label">EXPIRATION</label>
+        <div class="expiration-inputs">
+          <input type="text" placeholder="MM" />
+          <input type="text" placeholder="YY" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Back -->
+    <div class="card card-back">
+      <div class="stripe"></div>
+      <div class="cvv-section">
+        <label>CVV/CVV</label>
+        <input type="text" placeholder="xxx" />
+      </div>
+    </div>
+
+  </div>
+
+  <button class="submit-btn">Submit</button>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+  <!-- <head> -->
+    <!-- <meta charset="UTF-8" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- <title>Credit Card</title> -->
+    <!-- <link rel="icon" href="images/favicon.ico"> -->
+    <!-- <link rel="stylesheet" href="creditcard.css"/> -->
+    <!-- <script src="creditcard.js" defer></script> -->
+  <!-- </head> -->
+  <!-- <body> -->
+    <!-- <header><h1>Checkout</h1></header> -->
+    <!-- <main> -->
+      <!-- <section class="errors"></section> -->
+      <!-- <form id="cardInfo" action="completed.html" method="get"> -->
+<!--  -->
+        <!-- Container for credit card details -->
+        <!-- <p id="creditCardBack" role="region" aria-labelledby="creditCardLabel"> -->
+            <!-- <div id="CVC-CVV"> -->
+                <!-- <label id="CVCLabel" for="CVC">CVC/CVV</label> -->
+                <!-- <input -->
+                <!-- type="text" -->
+                <!-- id="CVC" -->
+                <!-- name="CVC" -->
+                <!-- pattern="[0-9]{3}" -->
+                <!-- placeholder="xxx" -->
+                <!-- required -->
+                <!-- /> -->
+            <!-- </div> -->
+        <!-- </p> -->
+        <!-- <p id="creditCardFront" role="region" aria-labelledby="creditCardLabel"> -->
+            <!-- <p id="price">TOTAL: $199</p> -->
+            <!--  -->
+            <!-- <div id="cardNumberBox"> -->
+                <!-- <label id="cardNumberLabel" for="cardNumber">CARD NUMBER</label> -->
+                <!-- <input -->
+                <!-- type="text" -->
+                <!-- id="cardNumber" -->
+                <!-- name="cardNumber" -->
+                <!-- pattern="[0-9]{16}" -->
+                <!-- placeholder="1234 5678 9101 1020" -->
+                <!-- required -->
+                <!-- /> -->
+            <!-- </div> -->
+            
+            <!-- <div id="cardHolderBox"> -->
+                <!-- <label id="cardHolderLabel" for="cardHolder">CARD HOLDER</label> -->
+                <!-- <input -->
+                <!-- type="text" -->
+                <!-- id="cardHolder" -->
+                <!-- name="cardHolder" -->
+                <!-- pattern="[0-9]{16}" -->
+                <!-- placeholder="John Doe" -->
+                <!-- required -->
+                <!-- /> -->
+            <!-- </div> -->
+
+            <!-- <label for="expirationDate">Expiration</label>
+            <input 
+            type="text" 
+            id="month" 
+            name="expMonth" 
+            placeholder="MM" 
+            aria-labelledby="expirationDate">
+            <input 
+            type="text" 
+            id="year" 
+            name="expYear" 
+            placeholder="YY" 
+            aria-labelledby="expirationDate"> -->
+
+            <!-- <div id="cardExpiration"> -->
+                <!-- <label for="expirationDate">EXPIRATION</label> -->
+                <!-- <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate"> -->
+                <!-- <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate"> -->
+            <!-- </div> -->
+        <!-- </p> -->
+
+        <!-- <button type="submit">Submit</button> -->
+      <!-- </form> -->
+    <!-- </main> -->
+  <!-- </body> -->
+<!-- </html> -->
