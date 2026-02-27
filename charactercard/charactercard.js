@@ -1,50 +1,84 @@
 // 20260226
 // https://wddbyui.github.io/wdd131/prove/prove_wk8.html
 
-const stats = document.querySelector('.stats')
-stats.innerHTML = htmlCharStats(charStats);
-const attackBtn = document.querySelector('.attack-button')
+// const attackButton = document.querySelector('.attack-button')
+// const lvlUpButton = document.querySelector('.lvl-up-button')
 
-attackBtn.addEventListener("click", function () {
-    charStats.attacked(20);
-    stats.innerHTML = htmlCharStats(charStats)
+const card = document.querySelector('.card')
+card.addEventListener('click', function (event) {
+    if (event.target.classList.contains('attack-button')) {
+        characterInfo.attacked(20);
+    }
+    if (event.target.classList.contains('lvl-up-button')) {
+        characterInfo.levelUp();
+    }
 });
 
-const charStats = {
-    char_class: 'Pirate Captain',
+const characterInfo = {
+    image_source: "images/Screenshot 2026-02-26 162416.png",
+    image_alt: "pirate lizard man with sword",
+    name: 'Red Bramman',
+    character_class: 'Pirate Captain',
     level: 5,
     health: 100,
     attacked: function(damage) {
         this.health -= damage;
-        // stats.innerHTML = htmlCharStats(charStats);
-
+        // maybe I'll need to update the page now.
+        card.innerHTML = characterCardHTML(characterInfo);
+        if (this.health <= 0) {
+            alert('Character Died.');
+        }
+        // card.innerHTML = characterCardHTML(characterInfo);
+        renderCharacterCard();
     },
     levelUp: function() {
         this.level ++;
+        renderCharacterCard();
     }
 };
 
-function htmlCharStats(charStats) {
-    return `<p><b>Class:</b> ${charStats.char_class}</p>
-            <p><b>Level:</b> ${currentLvl}</p>
-            <p><b>Health:</b> ${currentHealth}</p>`
-}
+// attackButton.addEventListener("click", function () {
+//     characterInfo.attacked(20);
+//     // renderCharacterCard();
+// });
 
+// 
+
+function characterCardHTML(characterInfo) {
+    return `
+    <img src="${characterInfo.image_source}" alt="${characterInfo.image_alt}" class="image">
+    <h3 class="name">${characterInfo.name}</h3>
+    <div class="stats">
+        <p><b>Class:</b> ${characterInfo.character_class}</p>
+        <p><b>Level:</b> ${characterInfo.level}</p>
+        <p><b>Health:</b> ${characterInfo.health}</p>
+    </div>
+    <div class="buttons">
+        <button class="attack-button">Attacked</button>
+        <button class="lvl-up-button">Level Up</button>
+    </div>
+    `
+};
+
+function renderCharacterCard() {
+    card.innerHTML = characterCardHTML(characterInfo);
+};
+renderCharacterCard();
 ////////////////////////////////////////////////////////
 
-// const charStats = {
+// const characterInfo = {
 //     sections: [
 //     { sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},
 //     { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'},
 //     { sectionNum: 3, roomNum: 'STC 3000', enrolled: 21, days: 'MWF', instructor: 'Bro T'}
 //     ],
 
-//     char_class: 'Pirate Captain',
+//     character_class: 'Pirate Captain',
 //     level: 5,
 //     health: 100,
 //     attacked: function(damage) {
 //         this.health -= damage;
-//         stats.innerHTML = htmlCharStats(charStats);
+//         stats.innerHTML = htmlcharacterInfo(characterInfo);
 //     },
 //     levelUp: function() {
 //         this.level ++;
@@ -62,10 +96,10 @@ function htmlCharStats(charStats) {
 //       }
 //   };
 
-// function sectionTemplate(charStats) {
-//     return `<p><b>Class:</b> ${charStats.char_class}</p>
-//             <p><b>Level:</b> ${charStats.currentLvl}</p>
-//             <p><b>Health:</b> ${charStats.currentHealth}</p>`
+// function sectionTemplate(characterInfo) {
+//     return `<p><b>Class:</b> ${characterInfo.character_class}</p>
+//             <p><b>Level:</b> ${characterInfo.currentLvl}</p>
+//             <p><b>Health:</b> ${characterInfo.currentHealth}</p>`
 // }
 
 // function renderSections(sections) {
