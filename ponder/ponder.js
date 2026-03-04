@@ -7,7 +7,7 @@ const repo = "wdd131";
 const baseApiUrl = `https://api.github.com/repos/${username}/${repo}/contents/`;
 console.log(baseApiUrl)
 console.log(window.location.pathame)
-const basePagesUrl = `https://${username}.github.io/${repo}/ponder/`;
+const basePagesUrl = `https://${username}.github.io/${repo}/`;
 console.log(basePagesUrl)
 // Instead of the above ^ line, I wanted to try this. v (But it didn't work first-try and I'm gonna just worry about it later.)
 // const basePagesUrl = window.location.pathname
