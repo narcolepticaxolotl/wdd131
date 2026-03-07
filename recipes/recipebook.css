@@ -83,7 +83,7 @@ footer {
     .recipe-card p {display: unset;}
 
     footer {
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-between;
     }
 }
