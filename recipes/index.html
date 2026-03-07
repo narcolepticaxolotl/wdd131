@@ -30,18 +30,31 @@
     <script src="recipebook.js" defer></script>
 </head>
 <body>
+<header>
+    <div id="logo">
+        <img src="images/recipe-book.png" alt="Recipe Book site logo">
+        <h1>RecipeBook</h1>
+    </div>
+    <form id="search-box"> <!-- Make this a form element? -->
+        <input id="find-a-recipe" type="text" placeholder="Find a recipe">
+        <img src="images/search.svg" alt="">
+    </form>
+</header>
 <main>
-    <span
-    class="rating"
-    role="img"
-    aria-label="Rating: 4 out of 5 stars"
-    >
-    <span aria-hidden="true" class="icon-star">⭐</span>
-    <span aria-hidden="true" class="icon-star">⭐</span>
-    <span aria-hidden="true" class="icon-star">⭐</span>
-    <span aria-hidden="true" class="icon-star">⭐</span>
-    <span aria-hidden="true" class="icon-star-empty">☆</span>
-    </span>
+    <article class="recipe-card">
+        <img src="images/apple-crisp.jpg" alt="apple crisp with vanilla ice cream">
+        <div class="recipe-info">
+            <button>dessert</button>
+            <h2 class="recipe-name">Apple Crisp</h2>
+            <span
+            class="rating"
+            role="img"
+            aria-label="Rating: 4 out of 5 stars">
+            <span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true" class="icon-star">⭐</span><span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span><br>
+            <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+        </div>
+    </article>
 </main>
 <footer>
     <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
