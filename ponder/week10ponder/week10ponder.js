@@ -192,7 +192,7 @@ function search() {
     // clear out any previous content
     hikeContainer.innerHTML = '';
     // output onto screen
-    sortedHikes.forEach(function(hike){
+    sortedHikes.forEach(function (hike) {
       renderHike(hike);
     })
 }
