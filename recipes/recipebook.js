@@ -1,7 +1,7 @@
 // 20260314
 // https://wddbyui.github.io/wdd131/prove/prove_wk10.html
 
-console.log('JS loaded!');
+
 const recipes = [
 	{
 		author: 'Provo High Culinary Students',
@@ -324,12 +324,12 @@ let header = document.querySelector('header');
 header.addEventListener('keypress', function (event) {
 	if (event.key === 'Enter') {
 		console.log('Searching...');
+		event.preventDefault()
 		search();
 	}
 });
 
 let randomNum = Math.floor(Math.random() * recipes.length);
-console.log(randomNum);
 
 function tagTemplate(tags) {
 	return tags.map((tag) => `<button>${tag}</button>`).join(' ');
@@ -369,5 +369,7 @@ function renderCard(recipe) {
 }
 
 function init() {
-	renderCard(hikes[randomNum]);
+	renderCard(recipes[randomNum]);
 }
+
+init();
